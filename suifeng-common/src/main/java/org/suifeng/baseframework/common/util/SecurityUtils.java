@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
@@ -58,7 +59,7 @@ public class SecurityUtils {
     }
 
     protected static String buildqueryString(String queryString) {
-        StringBuilder builder = new StringBuilder("");
+        StringBuilder builder = new StringBuilder();
 
         Map<String, String> params = new TreeMap<String, String>();
 
@@ -121,7 +122,7 @@ public class SecurityUtils {
             byte[] array = md.digest(message.getBytes());
             StringBuffer sb = new StringBuffer();
             for (int i = 0; i < array.length; ++i) {
-                sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1, 3));
+                sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100), 1, 3);
             }
             return sb.toString();
         } catch (NoSuchAlgorithmException e) {
@@ -178,7 +179,7 @@ public class SecurityUtils {
         String base64 = null;
 
         try {
-            byte[] data = strToSign.getBytes("UTF-8");
+            byte[] data = strToSign.getBytes(StandardCharsets.UTF_8);
 
             //实例化Signature
             Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM);
@@ -244,7 +245,7 @@ public class SecurityUtils {
             byte[] enCodeFormat = secretKey.getEncoded();
             SecretKeySpec key = new SecretKeySpec(enCodeFormat, "AES");
             Cipher cipher = Cipher.getInstance("AES");// 创建密码器
-            byte[] byteContent = content.getBytes("utf-8");
+            byte[] byteContent = content.getBytes(StandardCharsets.UTF_8);
             cipher.init(Cipher.ENCRYPT_MODE, key);// 初始化
             byte[] result = cipher.doFinal(byteContent);
 
@@ -262,8 +263,6 @@ public class SecurityUtils {
         } catch (NoSuchPaddingException e) {
             e.printStackTrace();
         } catch (InvalidKeyException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (IllegalBlockSizeException e) {
             e.printStackTrace();

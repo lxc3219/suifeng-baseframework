@@ -44,7 +44,7 @@ public class ResultResponseBodyAdvice implements ResponseBodyAdvice<Object> {
         HttpServletRequest request = sra.getRequest();
         // 判断请求，是否有包装标记
         Object ann = request.getAttribute(ApiConfigConsts.RESPONSE_RESULT_ANN);
-        return ann == null ? false : true;
+        return ann != null;
     }
 
     @Override

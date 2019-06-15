@@ -211,7 +211,7 @@ public class RestClientHelper {
             return null;
         }
         JsonMapperUtils mapper = new JsonMapperUtils();
-        T res = (T) mapper.fromJson(result, responseType);
+        T res = mapper.fromJson(result, responseType);
         return res;
     }
 
@@ -231,7 +231,7 @@ public class RestClientHelper {
             }
         }
         JsonMapperUtils mapper = new JsonMapperUtils();
-        T res = (T) mapper.fromJson(result, typeReference);
+        T res = mapper.fromJson(result, typeReference);
         return res;
     }
 

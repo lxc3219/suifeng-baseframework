@@ -1,6 +1,7 @@
 package org.suifeng.baseframework.common.helper;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
@@ -29,14 +30,10 @@ public class DigestHelper {
         Mac mac = null;
         try {
             mac = Mac.getInstance("HmacSHA256");
-            SecretKeySpec secretKey = new SecretKeySpec(key.getBytes("UTF-8"), "HmacSHA256");
+            SecretKeySpec secretKey = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
             mac.init(secretKey);
-            mac.update(data.getBytes("UTF-8"));
+            mac.update(data.getBytes(StandardCharsets.UTF_8));
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            System.out.println("获取Signature签名信息异常：" + e.getMessage());
-            return null;
-        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             System.out.println("获取Signature签名信息异常：" + e.getMessage());
             return null;

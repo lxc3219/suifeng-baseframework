@@ -29,7 +29,7 @@ public enum ErrorType {
 	 */
 	private String value;
 
-	private ErrorType(String name, String value) {
+	ErrorType(String name, String value) {
 		this.name = name;
 		this.value = value;
 	}

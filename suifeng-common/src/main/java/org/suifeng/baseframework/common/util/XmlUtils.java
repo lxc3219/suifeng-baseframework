@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class XmlUtils {
 
-    public static <T> T convertFromXml(String xmlStr,Class<T> valueType) throws JsonParseException, JsonMappingException, IOException{
+    public static <T> T convertFromXml(String xmlStr,Class<T> valueType) throws IOException{
         ObjectMapper objectMapper = new XmlMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         T records = objectMapper.readValue(xmlStr, valueType);

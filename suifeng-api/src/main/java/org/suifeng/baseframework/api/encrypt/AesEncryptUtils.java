@@ -5,6 +5,7 @@ import org.apache.commons.codec.binary.Base64;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
 
 public class AesEncryptUtils {
 	private static final String KEY = "d7b85f6e214abcda";
@@ -23,7 +24,7 @@ public class AesEncryptUtils {
 		kgen.init(128);
 		Cipher cipher = Cipher.getInstance(ALGORITHMSTR);
 		cipher.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(encryptKey.getBytes(), "AES"));
-		return cipher.doFinal(content.getBytes("utf-8"));
+		return cipher.doFinal(content.getBytes(StandardCharsets.UTF_8));
 	}
 
 	public static String aesEncrypt(String content, String encryptKey) throws Exception {

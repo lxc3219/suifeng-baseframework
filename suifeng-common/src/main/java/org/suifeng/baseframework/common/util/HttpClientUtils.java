@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.ConnectException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
@@ -51,13 +52,13 @@ public class HttpClientUtils {
 			if (null != outputStr) {
 				OutputStream outputStream = httpUrlConn.getOutputStream();
 				// 注意编码格式，防止中文乱码
-				outputStream.write(outputStr.getBytes("UTF-8"));
+				outputStream.write(outputStr.getBytes(StandardCharsets.UTF_8));
 				outputStream.close();
 			}
 
 			// 将返回的输入流转换成字符串
 			InputStream inputStream = httpUrlConn.getInputStream();
-			InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "utf-8");
+			InputStreamReader inputStreamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
 			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
 			String str = null;
