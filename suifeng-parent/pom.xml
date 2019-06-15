@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.suifeng.baseframework</groupId>
+        <artifactId>suifeng-baseframework</artifactId>
+        <version>1.0.0-RELEASE</version>
+    </parent>
+    <artifactId>suifeng-parent</artifactId>
+    <packaging>pom</packaging>
+
+    <name>suifeng-parent</name>
+    <inceptionYear>2019</inceptionYear>
+    <description>依赖管理模块</description>
+
+    <developers>
+        <developer>
+            <name>luoxc</name>
+            <email>573070261@qq.com</email>
+            <roles>
+                <role>Owner</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>suifeng Release</name>
+            <url>http://192.168.1.1:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>suifeng Snapshot</name>
+            <url>http://192.168.1.1:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>Alfresco</id>
+            <url>https://maven.alfresco.com/nexus/content/repositories/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>Mulesoft</id>
+            <url>https://repository-master.mulesoft.org/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestone</id>
+            <name>Spring Milestone</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestone</id>
+            <name>Spring Milestone</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <main.basedir>${basedir}/..</main.basedir>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.version>3.5.4</maven.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
+
+        <!-- 依赖版本 -->
+        <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
+        <mybatis.version>2.0.1</mybatis.version>
+        <mybatis-plus.version>3.1.1</mybatis-plus.version>
+        <mybatis-generator.version>1.3.7</mybatis-generator.version>
+        <dynamic-datasource.version>2.5.4</dynamic-datasource.version>
+        <druid.version>1.1.16</druid.version>
+        <p6spy.version>3.8.2</p6spy.version>
+        <mapstruct.version>1.3.0.Final</mapstruct.version>
+        <cxf.version>3.2.5</cxf.version>
+        <beetl.version>1.1.67.RELEASE</beetl.version>
+        <esapi.version>2.1.0.1</esapi.version>
+        <kaptcha.version>1.1.0</kaptcha.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <jackson.version>2.9.8</jackson.version>
+        <hutool.version>4.5.10</hutool.version>
+        <guava.version>26.0-jre</guava.version>
+        <httpcore.verson>4.4.10</httpcore.verson>
+        <httpclient.version>4.5.6</httpclient.version>
+        <commons-io.version>2.6</commons-io.version>
+        <commons-codec.version>1.12</commons-codec.version>
+        <aspose-words-jdk16.version>16.8.0</aspose-words-jdk16.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <swagger-annotations.version>1.5.22</swagger-annotations.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <swagger-bootstrap-ui.version>1.9.3</swagger-bootstrap-ui.version>
+        <jwt.version>0.9.1</jwt.version>
+        <shiro.version>1.4.1</shiro.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <!-- mybatis 增强工具 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!-- mybatis代码生成工具 -->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>${mybatis-generator.version}</version>
+            </dependency>
+            <!-- 动态数据源切换 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic-datasource.version}</version>
+            </dependency>
+            <!-- druid数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- 格式化sql语句 -->
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
+            </dependency>
+            <!-- java bean 复制 -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <!-- cxf -->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <!-- beetl模板引擎 -->
+            <dependency>
+                <groupId>com.ibeetl</groupId>
+                <artifactId>beetl-framework-starter</artifactId>
+                <version>${beetl.version}</version>
+            </dependency>
+            <!-- ESAPI,防SQL注入,XSS攻击 -->
+            <dependency>
+                <groupId>org.owasp.esapi</groupId>
+                <artifactId>esapi</artifactId>
+                <version>${esapi.version}</version>
+            </dependency>
+            <!-- 验证码 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>kaptcha-spring-boot-starter</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!-- jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <!-- pojo与xml转化 -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <!-- pojo与yaml转化 -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-yaml</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-json-provider</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-mrbean</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcore.verson}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <!-- word转PDF 破解版-->
+            <dependency>
+                <groupId>com.aspose.words</groupId>
+                <artifactId>aspose-words-jdk16</artifactId>
+                <version>${aspose-words-jdk16.version}</version>
+            </dependency>
+            <!-- swagger Api文档工具 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+            <!-- swagger官方UI -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger-ui.version}</version>
+            </dependency>
+            <!-- swagger第三方UI -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>${swagger-bootstrap-ui.version}</version>
+            </dependency>
+            <!-- jwt -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+            <!-- shiro -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring-boot-starter</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <configuration>
+                        <!--如果想在没有web.xml文件的情况下构建WAR，请设置为false。-->
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+                <!--源码打包插件-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <phase>deploy</phase>
+                            <goals>
+                                <goal>deploy</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- 打包时过滤TEST文件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <skipTests>true</skipTests>
+                    </configuration>
+                </plugin>
+                <!-- 开启热部署 -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <fork>true</fork>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

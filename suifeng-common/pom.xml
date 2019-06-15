@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.suifeng.baseframework</groupId>
+        <artifactId>suifeng-parent</artifactId>
+        <version>1.0.0-RELEASE</version>
+        <relativePath>../suifeng-parent</relativePath>
+    </parent>
+    <artifactId>suifeng-common</artifactId>
+
+    <name>suifeng-common</name>
+    <inceptionYear>2019</inceptionYear>
+    <description>共用模块</description>
+
+    <properties>
+        <main.basedir>${basedir}/..</main.basedir>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.suifeng.baseframework</groupId>
+            <artifactId>suifeng-model</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <!-- apache 工具包 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <!-- 处理文件上传下载 -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-io</groupId>
+                    <artifactId>commons-io</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- 处理io流 -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <!-- 处理摘要运算、编码解码 -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <!-- log -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+        <!-- jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+  <!--      <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+        </dependency>-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-mrbean</artifactId>
+        </dependency>
+        <!-- word转PDF 破解版-->
+        <dependency>
+            <groupId>com.aspose.words</groupId>
+            <artifactId>aspose-words-jdk16</artifactId>
+        </dependency>
+    </dependencies>
+</project>

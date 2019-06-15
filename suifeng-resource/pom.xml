@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.suifeng.baseframework</groupId>
+        <artifactId>suifeng-parent</artifactId>
+        <version>1.0.0-RELEASE</version>
+        <relativePath>../suifeng-parent</relativePath>
+    </parent>
+    <artifactId>suifeng-resource</artifactId>
+
+    <name>suifeng-resource</name>
+    <inceptionYear>2019</inceptionYear>
+    <description>资源管理模块，对前端资源进行封装</description>
+
+    <properties>
+        <main.basedir>${basedir}/..</main.basedir>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.suifeng.baseframework</groupId>
+            <artifactId>suifeng-core</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!--Webjars版本定位工具（前端）-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>webjars-locator-core</artifactId>
+        </dependency>
+    </dependencies>
+</project>

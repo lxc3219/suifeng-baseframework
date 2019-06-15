@@ -1,0 +1,19 @@
+- 使用versions-maven-plugin批量修改版本号：
+    - cmd进入Maven工程根目录，运行命令:
+        mvn -f "pom.xml" versions:set
+            -DoldVersion=*
+            -DnewVersion=1.0.0-RELEASE
+            -DprocessAllModules=true
+            -DallowSnapshots=true
+            -DgenerateBackupPoms=true
+    - 简化版命令：
+        mvn versions:set -DnewVersion=1.0.0-RELEASE
+
+- 回退版本号，必须设置generateBackupPoms为true（默认值）
+    mvn versions:revert
+
+- 确认修改过的版本号，该命令会删除修改版本号时生成的pom备份文件
+    mvn versions:commit
+
+- 直接修改版本号，无需确认
+    mvn versions:set -DnewVersion=1.2.0-SNAPSHOT -DgenerateBackupPoms=false

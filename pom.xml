@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.suifeng.baseframework</groupId>
+    <artifactId>suifeng-baseframework</artifactId>
+    <version>1.0.0-RELEASE</version>
+    <packaging>pom</packaging>
+
+    <name>suifeng-baseframework</name>
+    <inceptionYear>2019</inceptionYear>
+    <description>应用基础框架</description>
+
+    <developers>
+        <developer>
+            <name>luoxc</name>
+            <email>573070261@qq.com</email>
+            <roles>
+                <role>Owner</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <properties>
+        <revision>1.0.0-RELEASE</revision>
+        <main.basedir>${basedir}</main.basedir>
+    </properties>
+
+    <modules>
+        <module>suifeng-parent</module>
+        <module>suifeng-model</module>
+        <module>suifeng-common</module>
+        <module>suifeng-core</module>
+        <module>suifeng-ui</module>
+        <module>suifeng-resource</module>
+        <module>suifeng-generator</module>
+        <module>suifeng-api</module>
+        <module>suifeng-security</module>
+        <module>suifeng-admin</module>
+        <module>suifeng-demo</module>
+        <module>suifeng-guide</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <!--<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <configuration>
+                    &lt;!&ndash; mvn versions:set -DnewVersion=1.0.0 &ndash;&gt;
+                    &lt;!&ndash; 配置是否生成备份pom，用于版本回滚 &ndash;&gt;
+                    <generateBackupPoms>false</generateBackupPoms>
+                    &lt;!&ndash; 是否更新目录下所有模块无论是否声明父子节点 &ndash;&gt;
+                    <processAllModules>false</processAllModules>
+                    &lt;!&ndash; 是否更新-snapshot快照版 &ndash;&gt;
+                    <allowSnapshots>true</allowSnapshots>
+                    &lt;!&ndash; 指定需要更新的版本号可以使用缺省‘*’ &ndash;&gt;
+                    <oldVersion>${project.version}</oldVersion>
+                    &lt;!&ndash; 设置的新版本号 &ndash;&gt;
+                    <newVersion>${revision}</newVersion>
+                </configuration>
+            </plugin>-->
+        </plugins>
+    </build>
+</project>

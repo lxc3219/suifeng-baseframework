@@ -1,0 +1,37 @@
+#接口相关配置
+- restful接口
+    - 是否启用rest：
+        - 开启：api.rest.enabled: true
+        - 关闭：api.rest.enabled: false
+    - 接口地址配置：api.rest.server-addr: http://localhost:8081/tzydb
+    - http请求配置
+        - 连接池的最大连接数：api.rest.http.max-total-connect: 1000
+        - 单个主机的最大连接数：api.rest.http.max-connect-per-route: 1000
+        - 连接超时：api.rest.http.connect-timeout: 3000
+        - 读取超时：api.rest.http.read-timeout: 30000
+- 统一异常处理
+    - 标识异常类型
+        - 针对管理端接口异常：api.exception.type: admin
+        - 针对restful接口异常：api.exception.type: rest
+- 返回体封装
+    - 是否启用返回体封装
+        - 开启：api.result.enabled: true
+        - 关闭：api.result.enabled: false
+- swagger接口文档
+    - 是否启用swagger
+        - 开启：api.swagger.enabled: true
+        - 关闭：api.swagger.enabled: false
+    - 基本信息描述
+        - 标题：api.swagger.title: 台州移动办
+        - 描述：api.swagger.description: 台州移动办文档
+        - 版本：api.swagger.verson: 1.0.0
+        - 许可证：api.swagger.license:
+        - 许可证URL：api.swagger.license-url:
+        - 服务条款URL：api.swagger.terms-of-service-url:
+        - 维护人：api.swagger.contact.name: luoxc
+        - 维护人URL：api.swagger.contact.url:
+        - 维护人邮箱：api.swagger.contact.email: 573070261@qq.com
+        - 扫描的基础包：api.swagger.base-package:
+        - 需要处理的基础URL规则：api.swagger.base-path:
+        - 需要排除的URL规则：api.swagger.exclude-path:
+        - 文档的host信息: api.swagger.host:
