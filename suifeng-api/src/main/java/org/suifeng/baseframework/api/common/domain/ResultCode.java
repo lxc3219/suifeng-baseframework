@@ -8,7 +8,7 @@ public class ResultCode implements BaseExceptionEnum {
     private Integer code;
     private String msg;
 
-    public ResultCode() {};
+    public ResultCode() {}
 
     public ResultCode(Integer code, String msg) {
         this.code = code;
