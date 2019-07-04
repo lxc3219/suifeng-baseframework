@@ -1,8 +1,5 @@
 package org.suifeng.baseframework.api.result;
 
-import org.suifeng.baseframework.api.common.domain.Result;
-import org.suifeng.baseframework.api.common.helper.RestHelper;
-import org.suifeng.baseframework.api.constant.ApiConfigConsts;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.MethodParameter;
@@ -15,10 +12,11 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
+import org.suifeng.baseframework.api.common.domain.Result;
+import org.suifeng.baseframework.api.common.helper.RestHelper;
+import org.suifeng.baseframework.api.constant.ApiConfigConsts;
 
 import javax.servlet.http.HttpServletRequest;
-
-import static org.suifeng.baseframework.api.common.helper.RestHelper.ok;
 
 /**
  * 返回体封装

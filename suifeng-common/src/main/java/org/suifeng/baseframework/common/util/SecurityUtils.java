@@ -1,6 +1,7 @@
 package org.suifeng.baseframework.common.util;
 
 import org.apache.commons.codec.binary.Base64;
+
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.BufferedReader;

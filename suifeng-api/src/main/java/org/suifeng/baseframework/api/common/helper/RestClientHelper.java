@@ -2,16 +2,16 @@ package org.suifeng.baseframework.api.common.helper;
 
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import org.suifeng.baseframework.api.rest.RestProperties;
-import org.suifeng.baseframework.api.common.domain.ResultCode;
-import org.suifeng.baseframework.api.common.exception.BizException;
-import org.suifeng.baseframework.api.common.exception.RestException;
-import org.suifeng.baseframework.common.util.databind.JsonMapperUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+import org.suifeng.baseframework.api.common.domain.ResultCode;
+import org.suifeng.baseframework.api.common.exception.BizException;
+import org.suifeng.baseframework.api.common.exception.RestException;
+import org.suifeng.baseframework.api.rest.RestProperties;
+import org.suifeng.baseframework.common.util.databind.JsonMapperUtils;
 
 import java.lang.reflect.Type;
 

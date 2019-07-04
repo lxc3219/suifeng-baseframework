@@ -1,5 +1,12 @@
 package org.suifeng.baseframework.common.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -7,12 +14,6 @@ import java.io.OutputStream;
 import java.net.ConnectException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class HttpClientUtils {
 

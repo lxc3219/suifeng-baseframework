@@ -1,12 +1,10 @@
 package org.suifeng.baseframework.common.helper;
 
-import java.io.UnsupportedEncodingException;
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
 /**
  * 加密算法辅助类
  * @author yxy
