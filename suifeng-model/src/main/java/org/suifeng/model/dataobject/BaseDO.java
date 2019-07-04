@@ -18,11 +18,17 @@ public class BaseDO implements Serializable {
      */
     private Date updateTime;
 
+    /**
+     * 逻辑删除标记
+     */
+    private Integer deleted;
+
     @Override
     public String toString() {
         return "BaseDO{" +
                 "createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", deleted=" + deleted +
                 '}';
     }
 
@@ -42,5 +48,13 @@ public class BaseDO implements Serializable {
     public BaseDO setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
         return this;
+    }
+
+    public Integer getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
     }
 }
