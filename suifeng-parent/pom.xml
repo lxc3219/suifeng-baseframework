@@ -128,7 +128,7 @@
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <commons-fileupload.version>1.4</commons-fileupload.version>
         <fastjson.version>1.2.58</fastjson.version>
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>2.10.2</jackson.version>
         <hutool.version>4.5.10</hutool.version>
         <guava.version>26.0-jre</guava.version>
         <httpcore.verson>4.4.10</httpcore.verson>
