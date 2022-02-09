@@ -141,7 +141,7 @@
         <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
         <swagger-bootstrap-ui.version>1.9.3</swagger-bootstrap-ui.version>
         <jwt.version>0.9.1</jwt.version>
-        <shiro.version>1.4.1</shiro.version>
+        <shiro.version>1.7.1</shiro.version>
     </properties>
 
     <dependencies>
